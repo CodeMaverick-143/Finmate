@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { User, Bell, Shield, Palette, Globe } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { User, Bell, Shield, Palette } from 'lucide-react';
 import { Card } from '../../components/UI/Card';
 import { Button } from '../../components/UI/Button';
 import { Input } from '../../components/UI/Input';
@@ -29,12 +28,6 @@ const CURRENCIES = [
   { value: 'LKR', label: 'Sri Lankan Rupee (Rs)' }
 ];
 
-const THEMES = [
-  { value: 'light', label: 'Light' },
-  { value: 'dark', label: 'Dark' },
-  { value: 'system', label: 'System' }
-];
-
 export const Settings: React.FC = () => {
   const { isDark, toggleTheme } = useTheme();
   const { user } = useAuth();
@@ -49,6 +42,15 @@ export const Settings: React.FC = () => {
     monthlyBudget: '1000'
   });
   const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    // Load settings from localStorage
+    const savedSettings = localStorage.getItem('financeSettings');
+    if (savedSettings) {
+      const parsed = JSON.parse(savedSettings);
+      setSettings(prev => ({ ...prev, ...parsed }));
+    }
+  }, []);
 
   useEffect(() => {
     // Load settings from localStorage
