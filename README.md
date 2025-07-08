@@ -1,4 +1,4 @@
-# # Finmate - Student Edition
+# Finmate - Student Edition
 
 Finmate is a comprehensive personal finance tracker designed for students to manage income, expenses, savings goals, and budgets. It provides a user-friendly interface to help students stay on top of their finances and make informed financial decisions.
 
