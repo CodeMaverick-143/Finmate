@@ -1,4 +1,4 @@
-# Finmate - Student Edition
+# Finmate
 
 Finmate is a comprehensive personal finance tracker designed for students to manage income, expenses, savings goals, and budgets. It provides a user-friendly interface to help students stay on top of their finances and make informed financial decisions.
 
@@ -27,14 +27,14 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-- Node.js (v14 or later)
+- Node.js (v18 or later)
 - npm
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/ExplainHub/Finmate.git
+   git clone https://github.com/CodeMaverick-143/Finmate.git
    ```
 2. Install NPM packages
    ```sh
